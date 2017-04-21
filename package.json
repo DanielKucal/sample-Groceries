@@ -30,7 +30,10 @@
     "start-android-bundle": "npm run ns-bundle --android --start-app",
     "start-ios-bundle": "npm run ns-bundle --ios --start-app",
     "build-android-bundle": "npm run ns-bundle --android --build-app",
-    "build-ios-bundle": "npm run ns-bundle --ios --build-app"
+    "build-ios-bundle": "npm run ns-bundle --ios --build-app",
+    "prerepro-undefined": "cp other-app/providers/config.service.ts ../config.service.ts",
+    "repro-undefined": "rm -f ./app/providers/config.service.ts",
+    "postrepro-undefined": "ln -s ../../../config.service.ts app/providers/config.service.ts"
   },
   "dependencies": {
     "@angular/common": "~4.0.0",
